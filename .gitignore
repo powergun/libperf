@@ -17,3 +17,9 @@ src/common
 src/benchmark
 src/example
 src/test
+
+build
+.idea
+cmake-build-debug
+*pyc
+*~
