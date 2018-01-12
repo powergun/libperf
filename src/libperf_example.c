@@ -35,6 +35,13 @@ main(int argc, char *argv[])
 
   libperf_enablecounter(pd, LIBPERF_COUNT_HW_INSTRUCTIONS);                  /* enable HW counter */
 
+  // let the CPU spins for a short while....
+  for (int i=0; i <= 100000; ++i) {
+    if (i) {
+      ;
+    }
+  }
+
   uint64_t counter = libperf_readcounter(pd, LIBPERF_COUNT_HW_INSTRUCTIONS); /* obtain counter value */
 
   libperf_disablecounter(pd, LIBPERF_COUNT_HW_INSTRUCTIONS);                 /* disable HW counter */
